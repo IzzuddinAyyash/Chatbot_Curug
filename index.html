@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Curug Bogor</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        #chatbox { border: 1px solid #ddd; padding: 10px; width: 300px; height: 400px; overflow-y: auto; margin-bottom: 10px; }
+        #user-input { width: 80%; padding: 5px; }
+        #send-btn { padding: 5px 10px; }
+        .message { margin: 5px; padding: 5px; border-radius: 5px; }
+        .user { background-color: #f0f0f0; text-align: right; }
+        .bot { background-color: #d1f7d1; text-align: left; }
+    </style>
+</head>
+<body>
+    <h2>Chatbot Rekomendasi Curug Bogor</h2>
+    <div id="chatbox"></div>
+    <input type="text" id="user-input" placeholder="Ketik pesan..." />
+    <button id="send-btn">Kirim</button>
+
+    <script>
+        // Fungsi untuk menampilkan pesan di chatbox
+        function displayMessage(message, sender) {
+            const chatbox = document.getElementById("chatbox");
+            const msgDiv = document.createElement("div");
+            msgDiv.classList.add("message");
+            msgDiv.classList.add(sender);
+            msgDiv.textContent = message;
+            chatbox.appendChild(msgDiv);
+            chatbox.scrollTop = chatbox.scrollHeight; // Scroll ke bawah
+        }
+
+        // Fungsi untuk mengirim pesan ke Flask dan mendapatkan respons
+        document.getElementById("send-btn").addEventListener("click", function() {
+            const userInput = document.getElementById("user-input").value;
+            if (!userInput) return;
+
+            displayMessage(userInput, "user");  // Tampilkan pesan user
+            document.getElementById("user-input").value = "";  // Reset input field
+
+            // Kirim data ke Flask dengan menggunakan fetch
+            fetch("/chat", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ message: userInput })
+            })
+            .then(response => response.json())
+            .then(data => {
+                displayMessage(data.response, "bot");  // Tampilkan respons bot
+            })
+            .catch(error => {
+                displayMessage("Maaf, terjadi kesalahan. Silakan coba lagi.", "bot");
+            });
+        });
+    </script>
+</body>
+</html>

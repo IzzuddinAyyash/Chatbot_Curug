@@ -1,0 +1,72 @@
+{
+    "Curug Cilember": {
+        "deskripsi": "Curug ini memiliki 7 tingkat air terjun dengan suasana hutan yang sejuk.",
+        "fitur": {
+            "aktivitas": ["trekking ringan", "wisata keluarga"],
+            "fasilitas": ["tempat istirahat", "warung"]
+        },
+        "tiket": 25000,
+        "lokasi": "Cisarua, Bogor",
+        "rating": 4.7
+    },
+    "Curug Leuwi Hejo": {
+        "deskripsi": "Airnya sangat jernih, sering disebut Green Canyon Bogor. Cocok untuk berenang.",
+        "fitur": {
+            "aktivitas": ["berenang", "fotografi"],
+            "fasilitas": ["tempat parkir", "warung"]
+        },
+        "tiket": 15000,
+        "lokasi": "Cibadak, Bogor",
+        "rating": 4.6
+    },
+    "Curug Bidadari": {
+        "deskripsi": "Curug ini mudah diakses dan dilengkapi fasilitas seperti kolam renang.",
+        "fitur": {
+            "aktivitas": ["berenang", "wisata keluarga"],
+            "fasilitas": ["kolam renang", "kamar mandi", "warung"]
+        },
+        "tiket": 30000,
+        "lokasi": "Citeureup, Bogor",
+        "rating": 4.5
+    },
+    "Curug Nangka": {
+        "deskripsi": "Curug ini memiliki pemandangan indah dan cocok untuk piknik keluarga.",
+        "fitur": {
+            "aktivitas": ["piknik", "berkemah", "trekking"],
+            "fasilitas": ["tempat parkir", "toilet", "area piknik"]
+        },
+        "tiket": 20000,
+        "lokasi": "Taman Sari, Bogor",
+        "rating": 4.8
+    },
+    "Curug Tilu": {
+        "deskripsi": "Curug Tilu adalah tempat yang cocok untuk melakukan trekking dan berfoto.",
+        "fitur": {
+            "aktivitas": ["trekking", "fotografi", "wisata keluarga"],
+            "fasilitas": ["tempat parkir", "warung"]
+        },
+        "tiket": 15000,
+        "lokasi": "Cisarua, Bogor",
+        "rating": 4.3
+    },
+    "Curug Cipamingkis": {
+        "deskripsi": "Curug yang memiliki air terjun tinggi dan pemandangan yang memukau.",
+        "fitur": {
+            "aktivitas": ["fotografi", "berenang"],
+            "fasilitas": ["tempat parkir", "warung"]
+        },
+        "tiket": 25000,
+        "lokasi": "Sukamakmur, Bogor",
+        "rating": 4.6
+    },
+    "Curug Parigi": {
+        "deskripsi": "Curug dengan air terjun yang menawan dan cocok untuk wisata keluarga.",
+        "fitur": {
+            "aktivitas": ["wisata keluarga", "berenang", "trekking"],
+            "fasilitas": ["warung", "tempat parkir", "toilet"]
+        },
+        "tiket": 27000,
+        "lokasi": "Caringin, Bogor",
+        "rating": 4.5
+    }
+}
